@@ -1,0 +1,202 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow: scroll;
+}
+
+.inicio {
+  position: sticky;
+  top: 0%;
+  backdrop-filter: blur(2.8125rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  z-index: 5;
+}
+
+.inicio__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.list {
+  list-style-type: none;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+}
+
+.list::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 1.25rem;
+  height: 0.125rem;
+  background-color: orange;
+  transition: width 0.5s ease;
+  opacity: 0;
+}
+
+.list:hover::after {
+  width: 35%;
+  opacity: 1;
+}
+
+.list:hover::after {
+  cursor: pointer;
+  color: orange;
+}
+
+.sectionPrimary {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionPrimary__tilteText{
+    position: relative;
+    top:60px;
+    left: 250px;
+    z-index: 2;
+}
+
+.sectionPrimary__title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+#evoluir {
+  color: orange;
+}
+
+.sectionPrimary__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50%;
+  width: 40%;
+}
+
+p {
+  font-weight: 500;
+}
+
+.image {
+  position: relative;
+  right: 15.625rem;
+  top: 3rem;
+  z-index: 1;
+}
+
+.image img {
+    height: 20rem;
+  box-shadow: 0px 0px 59px -14px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 59px -14px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 59px -14px rgba(0, 0, 0, 1);
+}
+
+footer{
+    display: block;
+}
+
+.textFooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textFooter__block{
+      position: fixed;
+      bottom: 0;       
+      left: 0;
+      width: 100%;     
+      text-align: center;
+      padding: 10px 0;
+      font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  .sectionPrimary__tilteText {
+    top: 40px;
+    left: 50px;
+  }
+
+  .sectionPrimary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sectionPrimary__text {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-right: 100px;
+  }
+
+  .image {
+    position: relative;
+    right: 0;
+    top: 80px;
+    margin-top: 2rem;
+    align-self: center;
+  }
+
+  .inicio__navbar {
+    gap: 1rem;
+  }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+  .sectionPrimary__title {
+    font-size: 1.75rem;
+    position: relative;
+    left: 13px;
+  }
+
+  .sectionPrimary__tilteText {
+    top: 3px;
+    left: 3px;
+  }
+
+  .sectionPrimary__text {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-left: 5px;
+    padding-right: 10px;
+  }
+
+  .image img {
+    height: 15rem;
+    width: auto;
+  }
+
+  .inicio__navbar {
+    padding: 1rem;
+  }
+
+  .list {
+    font-size: 0.9rem;
+  }
+
+  .textFooter__block {
+    font-size: 16px;
+    padding: 8px 0;
+    background-color: black;
+    color: white;
+  }
+}
